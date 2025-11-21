@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import Header from "../Header/Header";
@@ -34,13 +34,13 @@ class App extends Component {
         return (
             <>
                 <Notifications listNotifications={listNotifications}/>
-    
+
                 <div className="App">
                     <Header />
                 </div>
-                
+
                 <div className="App-body">{!isLoggedIn ? <Login /> : <CourseList listCourses={listCourses}/>}</div>
-    
+
                 <div className="App-footer">
                     <Footer />
                 </div>
