@@ -1,15 +1,9 @@
-/* ========== header ============== */
-.header {
+.App-header {
     display: flex;
     align-items: center;
-  }
-  
-  .header img {
-    width: 220px;
-  }
-  
-  .header h1 {
-    color: rgb(231, 4, 4);
-    font-size: 35px;
-  }
-  /* ================================== */
+    border-bottom: 2px solid #e1003c;
+}
+
+.App-header h1 {
+    color: #e1003c;
+}
