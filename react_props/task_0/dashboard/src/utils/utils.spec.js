@@ -26,7 +26,7 @@ describe('Test utils.js', () => {
   describe('getLatestNotification()', () => {
     it('Should return the correct value', () => {
       const expectValue = '<strong>Urgent requirement</strong> - complete by EOD';
-      const funcValue = getLatestNotification(false)
+      const funcValue = getLatestNotification()
       expect(funcValue).toEqual(expectValue);
     });
   });
