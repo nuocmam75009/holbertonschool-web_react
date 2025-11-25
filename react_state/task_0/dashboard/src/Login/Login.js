@@ -16,7 +16,7 @@ function Login() {
           <input></input>
         </label>
         <button className={App_body.AppBodyButton}>Ok</button>
-      </div>  
+      </div>
     </body>
   );
 }
@@ -53,4 +53,4 @@ const App_body = css({
 }
     ,
   });
-export default Login;       
+export default Login;

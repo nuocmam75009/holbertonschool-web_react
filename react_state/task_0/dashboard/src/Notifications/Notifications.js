@@ -25,7 +25,7 @@ class  Notifications extends React.Component {
       handleDisplayDrawer: PropTypes.func,
       handleHideDrawer: PropTypes.func,
     };
-  
+
     static defaultProps = {
       displayDrawer: false,
       listNotifications: [],
@@ -36,15 +36,17 @@ class  Notifications extends React.Component {
   markAsRead(id){
     console.log(`Notification ${id} has been marked as read`);
      }
- 
+
   render (){
     const { displayDrawer, handleDisplayDrawer, handleHideDrawer, listNotifications } = this.props;
 
     return(
     <>
-        <div className={menu_item} Your notifications  onClick={handleDisplayDrawer} id='menuItem'/>
+        <div className={`menu-item ${css(menuItem)}`} onClick={handleDisplayDrawer} id='menuItem'>
+          Your notifications
+        </div>
       { displayDrawer && (
-        <div className={Notifications_style} >
+        <div className={css(Notifications_style)} >
           {listNotifications.length > 0 ? (
             <Fragment>
             <p>Here is the list of notifications</p>
@@ -57,7 +59,7 @@ class  Notifications extends React.Component {
                 html={notification.html} />
               ))}
             </ul>
-            <button className={closeb} aria-label="Close" onClick={handleHideDrawer}>
+            <button className={`button ${css(closeb)}`} aria-label="Close" onClick={handleHideDrawer}>
               <img
               src={close} alt="close-icon"
               style={{ height: '10px', width: '10px' }}
@@ -125,13 +127,13 @@ const Notifications_style = css({
 });
 
 const  menuItem = css({
-  hover: {
-    ':hover': {
+  ':hover': {
     cursor: "pointer",
     animationName: [opacityKeyframes, translateKeyframes],
     animationDuration: '1s, 500ms',
     animationIterationCount: '3',
-  }},})
+  }
+})
 
 const  closeb = css({
   position: 'absolute',

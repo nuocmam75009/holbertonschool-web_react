@@ -61,7 +61,7 @@ describe('Test Notification.js', () => {
       beforeEach(() => {
         listNotifications = [];
       });
-  
+
       it("Notifications renders Notification Item correct with empty listNotifications", () => {
         const wrapper = shallow(
           <Notifications displayDrawer listNotifications={listNotifications} />
@@ -76,15 +76,15 @@ describe('Test Notification.js', () => {
       });
       it("wmarkAsRead is being called with the right message", () => {
         const wrapper = shallow(<Notifications displayDrawer />);
-  
+
         console.log = jest.fn();
-  
+
         const instance = wrapper.instance();
-  
+
         const id = 5;
-  
+
         instance.markAsRead(id);
-  
+
         expect(console.log).toHaveBeenCalledWith(
           `Notification ${id} has been marked as read`
         );
@@ -141,57 +141,27 @@ describe('Test Notification.js', () => {
       expect(shouldComponentUpdate).toHaveBeenCalled();
       jest.restoreAllMocks();
     });
-  
+
     describe('Notifications component', () => {
-      it('should have a default state of displayDrawer set to false', () => {
-        const wrapper = shallow(<Notifications
-          displayDrawer
-          handleDisplayDrawer={handleDisplayDrawer}
-          handleHideDrawer={handleHideDrawer}
-         />);
-        expect(wrapper.state().displayDrawer).toBe(false);
-      });
-    
-      it('should update state of displayDrawer to true after clicking on the menu item', () => {
-        const wrapper = shallow(  <Notifications
-          displayDrawer
-          handleDisplayDrawer={handleDisplayDrawer}
-          handleHideDrawer={handleHideDrawer}
-        />);
-        wrapper.find('.menu-item').simulate('click');
-        expect(wrapper.state().displayDrawer).toBe(true);
-      });
-    
       it('should call handleDisplayDrawer when clicking on the menu item', () => {
-        const handleDisplayDrawerSpy = jest.spyOn(Example.prototype, 'handleDisplayDrawer');
+        const handleDisplayDrawer = jest.fn();
         const wrapper = shallow(<Notifications
-        displayDrawer
-        handleDisplayDrawer={handleDisplayDrawer}
-        handleHideDrawer={handleHideDrawer}
-        />);
-        wrapper.find('.menu-item').simulate('click');
-        expect(handleDisplayDrawerSpy).toHaveBeenCalled();
-      });
-    
-      it('should update state of displayDrawer to false after clicking on the button', () => {
-        const wrapper = shallow(  <Notifications
-          displayDrawer
+          displayDrawer={false}
           handleDisplayDrawer={handleDisplayDrawer}
-          handleHideDrawer={handleHideDrawer}
+          handleHideDrawer={jest.fn()}
         />);
         wrapper.find('.menu-item').simulate('click');
-        wrapper.find('.button').simulate('click');
-        expect(wrapper.state().displayDrawer).toBe(false);
+        expect(handleDisplayDrawer).toHaveBeenCalled();
       });
-    
+
       it('should call handleHideDrawer when clicking on the button', () => {
-        const handleHideDrawerSpy = jest.spyOn(Example.prototype, 'handleHideDrawer');
-        const wrapper = shallow(  <Notifications
-          displayDrawer
-          handleDisplayDrawer={handleDisplayDrawer}
+        const handleHideDrawer = jest.fn();
+        const wrapper = shallow(<Notifications
+          displayDrawer={true}
+          handleDisplayDrawer={jest.fn()}
           handleHideDrawer={handleHideDrawer}
         />);
-        wrapper.find('.menu-item').simulate('click');
         wrapper.find('.button').simulate('click');
-        expect(handleHideDrawerSpy).toHaveBeenCalled();
-      })});
+        expect(handleHideDrawer).toHaveBeenCalled();
+      });
+    });

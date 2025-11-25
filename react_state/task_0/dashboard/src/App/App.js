@@ -8,6 +8,7 @@ import CourseList from '../CourseList/CourseList';
 import BodySectionWithMarginBottom from '../BodySection/BodySectionWithMarginBottom';
 import BodySection from '../BodySection/BodySection';
 import { StyleSheet, css } from "aphrodite/no-important";
+import { getLatestNotification } from '../utils/utils';
 
 const styles = StyleSheet.create({
   'App': {
@@ -27,12 +28,12 @@ class  App extends React.Component {
     isLoggedIn: PropTypes.bool,
     logOut: PropTypes.func
   };
-  
+
   static defaultProps = {
     isLoggedIn: false,
     logOut: ()=> {}
   };
-  
+
   handleDisplayDrawer =() => { this.setState({ displayDrawer: true }); }
 
   handleHideDrawer = () => { this.setState({ displayDrawer: false }); }
@@ -60,7 +61,7 @@ class  App extends React.Component {
   ];
 
 
-  
+
   const htmlObj = {
     __html: getLatestNotification(),
   };
@@ -73,11 +74,13 @@ class  App extends React.Component {
   const { displayDrawer } = this.state;
   return (
     <Fragment>
-      <Notifications listNotifications={listNotifications}/>
-      <div className={css(styles['App'])}
-       displayDrawer={displayDrawer}
-       handleDisplayDrawer={this.handleDisplayDrawer}
-       handleHideDrawer={this.handleHideDrawer} />
+      <Notifications
+        listNotifications={listNotifications}
+        displayDrawer={displayDrawer}
+        handleDisplayDrawer={this.handleDisplayDrawer}
+        handleHideDrawer={this.handleHideDrawer}
+      />
+      <div className={css(styles['App'])}>
         <Header />
         {this.props.isLoggedIn ? ( <BodySectionWithMarginBottom title="Course list"> <CourseList listCourses={listCourses}/> </BodySectionWithMarginBottom>)
         :  (
