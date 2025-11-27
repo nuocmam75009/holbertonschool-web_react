@@ -1,22 +1,17 @@
-th {
-    border-bottom: 1px solid gray;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-}
-
-th:first-child {
-    text-align: center;
-}
-
-table {
+.courses {
+    margin: 130px auto;
     width: 90%;
-    border: 1px solid gray;
-    margin: auto;
-    margin-top: 40px;
-    padding: 0;
+    height: 33vh
 }
 
+#CourseList {
+    width: 100%;
+}
+
+table,
+th,
+tr,
 td {
-    padding-left: 3px;
+    border-collapse: collapse;
+    border: 2px solid rgb(161, 161, 161);
 }
