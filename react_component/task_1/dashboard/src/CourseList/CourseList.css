@@ -1,17 +1,17 @@
-#courseList {
-    border: 1px solid #ccc;
+.courses {
+    margin: 130px auto;
     width: 90%;
-    margin: auto;
-    margin-top: 40px;
-    font-size: 22px;
+    height: 33vh
 }
 
-#courseList thead {
-    height: 80px;
+#CourseList {
+    width: 100%;
 }
 
-.th2, .th3 {
-    text-align: start;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+table,
+th,
+tr,
+td {
+    border-collapse: collapse;
+    border: 2px solid rgb(161, 161, 161);
 }

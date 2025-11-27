@@ -1,7 +1,7 @@
-/* ============body =================== */
-.App-body {
-    width: 100%;
-    height: 350px;
-  }
-  
-  /* ================================== */
+.App-login {
+    margin: 20px;
+}
+
+.App-login input {
+    margin: 0px 10px 0px 10px;
+}
