@@ -9,3 +9,4 @@ export const getFilteredNotifications = createSelector(
             filter === 'all' || notification.type === filter
         )
 );
+

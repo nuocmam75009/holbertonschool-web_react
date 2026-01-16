@@ -60,5 +60,6 @@ describe('NotificationItem', () => {
         const listItem = screen.getByRole('listitem');
         fireEvent.click(listItem);
         expect(markAsRead).toHaveBeenCalledTimes(1);
+        expect(markAsRead).toHaveBeenCalledWith(1);
     });
 });

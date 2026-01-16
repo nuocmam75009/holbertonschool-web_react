@@ -1,4 +1,4 @@
-import { getFilteredNotifications } from '../selectors/notificationsSelector';
+import { getFilteredNotifications } from '../selectors/notificationSelector';
 
 describe('getFilteredNotifications selector', () => {
     const mockState = {

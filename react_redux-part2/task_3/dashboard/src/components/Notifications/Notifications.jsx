@@ -2,7 +2,7 @@ import { memo, useCallback, useRef, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { markNotificationAsRead } from '../../features/notifications/notificationsSlice';
 import NotificationItem from '../NotificationItem/NotificationItem';
-import { getFilteredNotifications } from '../../features/selectors/notificationsSelector';
+import { getFilteredNotifications } from '../../features/selectors/notificationSelector';
 import './Notifications.scss';
 import closeIcon from '../../assets/close-icon.png';
 

@@ -25,27 +25,21 @@ describe('notificationsSlice', () => {
             notifications: [
                 {
                     id: '5debd764507712e7a1307303',
-                    context: {
-                        type: 'urgent',
-                        isRead: false,
-                        value: 'ut labore et dolore magna aliqua. Dignissim convallis aenean et tortor at risus viverra adipiscing. Ac tortor dignissim convallis aenean et.'
-                    }
+                    type: 'urgent',
+                    isRead: false,
+                    value: 'ut labore et dolore magna aliqua. Dignissim convallis aenean et tortor at risus viverra adipiscing. Ac tortor dignissim convallis aenean et.'
                 },
                 {
                     id: '5debd76444dd4dafea89d53b',
-                    context: {
-                        type: 'urgent',
-                        isRead: false,
-                        value: 'Non diam phasellus vestibulum lorem sed risus ultricies. Tellus mauris a diam maecenas sed'
-                    }
+                    type: 'urgent',
+                    isRead: false,
+                    value: 'Non diam phasellus vestibulum lorem sed risus ultricies. Tellus mauris a diam maecenas sed'
                 },
                 {
                     id: '5debd7644e561e022d66e61a',
-                    context: {
-                        type: 'urgent',
-                        isRead: false,
-                        value: 'In hendrerit gravida rutrum quisque non tellus orci. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim. Lorem mollis aliquam ut porttitor'
-                    }
+                    type: 'urgent',
+                    isRead: false,
+                    value: 'In hendrerit gravida rutrum quisque non tellus orci. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim. Lorem mollis aliquam ut porttitor'
                 }
             ],
         };
@@ -55,19 +49,15 @@ describe('notificationsSlice', () => {
             notifications: [
                 {
                     id: '5debd76444dd4dafea89d53b',
-                    context: {
-                        type: 'urgent',
-                        isRead: false,
-                        value: 'Non diam phasellus vestibulum lorem sed risus ultricies. Tellus mauris a diam maecenas sed'
-                    }
+                    type: 'urgent',
+                    isRead: false,
+                    value: 'Non diam phasellus vestibulum lorem sed risus ultricies. Tellus mauris a diam maecenas sed'
                 },
                 {
                     id: '5debd7644e561e022d66e61a',
-                    context: {
-                        type: 'urgent',
-                        isRead: false,
-                        value: 'In hendrerit gravida rutrum quisque non tellus orci. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim. Lorem mollis aliquam ut porttitor'
-                    }
+                    type: 'urgent',
+                    isRead: false,
+                    value: 'In hendrerit gravida rutrum quisque non tellus orci. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim. Lorem mollis aliquam ut porttitor'
                 }
             ],
         };
